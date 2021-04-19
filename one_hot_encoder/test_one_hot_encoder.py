@@ -16,8 +16,7 @@ class TestTF(unittest.TestCase):
         self.assertEqual(actual, expected)
 
     def test_not_london(self):
-        cities = ['Moscow', 'New York']
-        actual = one_hot_encoder.fit_transform(cities)
+        actual = one_hot_encoder.fit_transform("Moscow","New York")
         self.assertNotIn(('London', [1, 0]), actual)
 
     def test_not_arg(self):
